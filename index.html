@@ -113,27 +113,45 @@
     <div class="absolute top-[10%] left-[-10%] w-[500px] h-[500px] bg-red-900/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
     <div class="absolute bottom-[20%] right-[-10%] w-[500px] h-[500px] bg-red-900/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
-    <!-- HEADER / NAVIGATION (VISHNU PILL STYLE) -->
+    <!-- HEADER / NAVIGATION -->
     <header class="fixed top-6 left-1/2 -translate-x-1/2 w-[calc(100%-48px)] max-w-7xl h-16 glass-panel rounded-full flex justify-between items-center px-6 z-50">
         <div class="logo font-extrabold text-lg tracking-tight select-none">iamAhsan</div>
         
-        <!-- Tab Selector Menu -->
-        <nav class="hidden md:flex items-center gap-1 bg-[#121212]/50 border border-white/[0.04] p-1 rounded-full relative">
+        <!-- Tab Selector Menu (Right Aligned on Desktop) -->
+        <nav class="hidden md:flex items-center gap-1 bg-[#121212]/50 border border-white/[0.04] p-1 rounded-full relative ml-auto">
             <button class="active-tab tab-btn px-5 py-2 text-xs font-semibold uppercase tracking-wider rounded-full text-white transition-all duration-300" onclick="switchTab('work', this)">Work</button>
             <button class="tab-btn px-5 py-2 text-xs font-semibold uppercase tracking-wider rounded-full text-zinc-500 hover:text-white transition-all duration-300" onclick="switchTab('visuals', this)">Visuals</button>
             <button class="tab-btn px-5 py-2 text-xs font-semibold uppercase tracking-wider rounded-full text-zinc-500 hover:text-white transition-all duration-300" onclick="switchTab('about', this)">About</button>
             <button class="tab-btn px-5 py-2 text-xs font-semibold uppercase tracking-wider rounded-full text-zinc-500 hover:text-white transition-all duration-300" onclick="switchTab('connect', this)">Connect</button>
         </nav>
 
-        <div>
-            <a href="#collaboration" class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider border border-white/10 hover:border-accentRed hover:bg-accentRed hover:text-white transition-all duration-300">Initiate</a>
+        <!-- Mobile Action Menu Controller Toggle -->
+        <div class="flex md:hidden items-center">
+            <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="p-2 border border-white/10 rounded-full bg-zinc-950/40 text-white focus:outline-none transition-all duration-300" aria-label="Toggle Menu">
+                <!-- Hamburger Icon -->
+                <svg id="hamburgerIcon" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                </svg>
+                <!-- Close Icon (Hidden Initially) -->
+                <svg id="closeIcon" class="w-5 h-5 hidden transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
         </div>
     </header>
+
+    <!-- Mobile Dropdown Dynamic Overlay Navigation Panel -->
+    <div id="mobileDropdownMenu" class="fixed top-24 left-1/2 -translate-x-1/2 w-[calc(100%-48px)] glass-panel rounded-3xl hidden flex-col p-4 space-y-2 z-40 md:hidden opacity-0 transform translate-y-[-10px] transition-all duration-300">
+        <button class="mobile-tab-btn w-full text-left px-5 py-3 text-xs font-bold uppercase tracking-widest rounded-xl text-white bg-white/5 border border-white/10" onclick="switchMobileTab('work')">01 / Work</button>
+        <button class="mobile-tab-btn w-full text-left px-5 py-3 text-xs font-bold uppercase tracking-widest rounded-xl text-zinc-400 hover:bg-white/5 transition-all" onclick="switchMobileTab('visuals')">02 / Visuals</button>
+        <button class="mobile-tab-btn w-full text-left px-5 py-3 text-xs font-bold uppercase tracking-widest rounded-xl text-zinc-400 hover:bg-white/5 transition-all" onclick="switchMobileTab('about')">03 / About</button>
+        <button class="mobile-tab-btn w-full text-left px-5 py-3 text-xs font-bold uppercase tracking-widest rounded-xl text-zinc-400 hover:bg-white/5 transition-all" onclick="switchMobileTab('connect')">04 / Connect</button>
+    </div>
 
     <!-- MAIN APP CANVAS CONTAINER -->
     <main class="container max-w-7xl mx-auto px-6 pt-36 pb-20 relative z-10">
 
-        <!-- --- HERO PROFILE CARD (VISHNU DESIGN STYLE) --- -->
+        <!-- --- HERO PROFILE CARD --- -->
         <section class="mb-16">
             <div class="flex items-center gap-3 mb-6">
                 <!-- Glowing Blinking Active Dot -->
@@ -247,14 +265,13 @@
                 </div>
             </div>
 
-            <!-- TAB 2: VISUAL EXPERIMENTS (DASHBOARD-STYLE SUB-ITEMS) -->
+            <!-- TAB 2: VISUAL EXPERIMENTS -->
             <div id="tab-visuals" class="tab-view hidden space-y-4">
                 <div class="border-b border-white/[0.05] pb-4 mb-8">
                     <h2 class="text-xs uppercase tracking-widest text-zinc-500 font-bold">02 / UI Sketchbook & Experiments</h2>
                 </div>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Sketch card 1 -->
                     <div class="glass-panel p-6 rounded-2xl flex flex-col gap-4">
                         <div class="aspect-video w-full rounded-lg bg-zinc-950 border border-white/5 relative overflow-hidden flex items-center justify-center">
                             <span class="text-[10px] text-zinc-500 uppercase tracking-widest">Motion Layout #104</span>
@@ -264,7 +281,6 @@
                             <h4 class="text-base font-bold mt-1">SaaS Linear Interface Grid</h4>
                         </div>
                     </div>
-                    <!-- Sketch card 2 -->
                     <div class="glass-panel p-6 rounded-2xl flex flex-col gap-4">
                         <div class="aspect-video w-full rounded-lg bg-zinc-950 border border-white/5 relative overflow-hidden flex items-center justify-center">
                             <span class="text-[10px] text-zinc-500 uppercase tracking-widest">Interactive Sandbox #220</span>
@@ -274,7 +290,6 @@
                             <h4 class="text-base font-bold mt-1">Custom Pill Selector Animation</h4>
                         </div>
                     </div>
-                    <!-- Sketch card 3 -->
                     <div class="glass-panel p-6 rounded-2xl flex flex-col gap-4">
                         <div class="aspect-video w-full rounded-lg bg-zinc-950 border border-white/5 relative overflow-hidden flex items-center justify-center">
                             <span class="text-[10px] text-zinc-500 uppercase tracking-widest">Figma Component #11</span>
@@ -287,7 +302,7 @@
                 </div>
             </div>
 
-            <!-- TAB 3: ABOUT & STRATEGY (TRUST-BUILDING VALUE CARDS) -->
+            <!-- TAB 3: ABOUT & STRATEGY -->
             <div id="tab-about" class="tab-view hidden space-y-4">
                 <div class="border-b border-white/[0.05] pb-4 mb-8">
                     <h2 class="text-xs uppercase tracking-widest text-zinc-500 font-bold">03 / About iamAhsan</h2>
@@ -320,7 +335,7 @@
                             By combining classical marketing principles with ultra-refined interfaces and high-quality motion production, I bridge the gap between creative visual execution and direct commercial performance.
                         </p>
                         
-                        <div class="pt-6 border-t border-white/5 grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="pt-6 border-t border-white/5 grid grid-cols-2 sm:grid-cols-4 gap-4">
                             <div>
                                 <span class="text-[10px] uppercase tracking-wider text-zinc-500 block">Location</span>
                                 <span class="text-xs font-semibold">Remote / global</span>
@@ -348,15 +363,13 @@
                     <h2 class="text-xs uppercase tracking-widest text-zinc-500 font-bold">04 / Secure Collaboration</h2>
                 </div>
 
-                <!-- UPSCALED CONTAINER: max-w-xl -> max-w-3xl, p-8 -> p-10 -->
-                <div class="max-w-3xl mx-auto glass-panel p-10 rounded-2xl relative" id="collaboration">
-                    <h3 class="text-3xl font-extrabold mb-8 text-center uppercase tracking-tight">Initiate Project Inbound</h3>
+                <div class="max-w-3xl mx-auto glass-panel p-6 sm:p-10 rounded-2xl relative" id="collaboration">
+                    <h3 class="text-2xl sm:text-3xl font-extrabold mb-8 text-center uppercase tracking-tight">Initiate Project Inbound</h3>
                     
                     <form id="projectForm" onsubmit="handleFormSubmission(event)" class="space-y-6 text-left">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="flex flex-col gap-2">
                                 <label for="clientName" class="text-xs uppercase tracking-wider text-zinc-400 font-bold">Name</label>
-                                <!-- Upscaled text-xs -> text-sm, py-2.5 -> py-3.5 -->
                                 <input type="text" id="clientName" class="bg-zinc-950/80 border border-white/5 rounded-xl px-5 py-3.5 text-sm text-white focus:outline-none focus:border-accentRed transition-all" placeholder="Soyed Shafikul Ahsan" required>
                             </div>
                             <div class="flex flex-col gap-2">
@@ -376,18 +389,16 @@
                         </div>
                         <div class="flex flex-col gap-2">
                             <label for="brief" class="text-xs uppercase tracking-wider text-zinc-400 font-bold">Project Details</label>
-                            <!-- Rows increased 3 -> 5 -->
                             <textarea id="brief" rows="5" class="bg-zinc-950/80 border border-white/5 rounded-xl px-5 py-3.5 text-sm text-white focus:outline-none focus:border-accentRed transition-all resize-none" placeholder="Describe the structural goals or scope details..." required></textarea>
                         </div>
                         
-                        <!-- Button text upscaled to text-sm and extra padding -->
                         <button type="submit" class="w-full bg-white hover:bg-accentRed hover:text-white text-zinc-950 py-4 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 transform active:scale-95">
                             Secure Collaboration Space
                         </button>
                     </form>
 
                     <!-- Successful Submission Screen Receipt Terminal -->
-                    <div class="hidden absolute inset-0 bg-black/90 rounded-2xl flex flex-col justify-center items-center text-center p-8 transition-all duration-500 z-20" id="formSuccess">
+                    <div class="hidden absolute inset-0 bg-black/90 rounded-2xl flex flex-col justify-center items-center text-center p-6 sm:p-8 transition-all duration-500 z-20" id="formSuccess">
                         <span class="text-4xl mb-4">✨</span>
                         <h3 class="text-xl font-bold uppercase tracking-wide text-accentRed">Inbound Secure</h3>
                         <p class="text-zinc-400 text-xs font-light mt-2 max-w-sm">
@@ -453,8 +464,21 @@
                 btn.classList.remove('active-tab', 'text-white');
                 btn.classList.add('text-zinc-500');
             });
-            buttonEl.classList.add('active-tab', 'text-white');
-            buttonEl.classList.remove('text-zinc-500');
+            if(buttonEl) {
+                buttonEl.classList.add('active-tab', 'text-white');
+                buttonEl.classList.remove('text-zinc-500');
+            }
+
+            // Sync Mobile Dropdown Button Styles too
+            document.querySelectorAll('.mobile-tab-btn').forEach(mBtn => {
+                mBtn.classList.remove('text-white', 'bg-white/5', 'border-white/10');
+                mBtn.classList.add('text-zinc-400');
+            });
+            const matchingMobileBtn = document.querySelector(`.mobile-tab-btn[onclick*="${tabId}"]`);
+            if(matchingMobileBtn) {
+                matchingMobileBtn.classList.add('text-white', 'bg-white/5', 'border-white/10');
+                matchingMobileBtn.classList.remove('text-zinc-400');
+            }
 
             // Handle Tab Viewport Animations
             const targetView = document.getElementById(`tab-${tabId}`);
@@ -476,7 +500,44 @@
             });
         }
 
-        // 3. Project Initiation Inbound Processing
+        // 3. Mobile Navigation Dropdown Controller Logic
+        let isMobileMenuOpen = false;
+        const mobileDropdown = document.getElementById('mobileDropdownMenu');
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const closeIcon = document.getElementById('closeIcon');
+
+        function toggleMobileMenu() {
+            isMobileMenuOpen = !isMobileMenuOpen;
+            if (isMobileMenuOpen) {
+                mobileDropdown.classList.remove('hidden');
+                hamburgerIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+                gsap.to(mobileDropdown, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" });
+            } else {
+                closeMobileMenuPanel();
+            }
+        }
+
+        function closeMobileMenuPanel() {
+            isMobileMenuOpen = false;
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            gsap.to(mobileDropdown, { 
+                opacity: 0, 
+                y: -10, 
+                duration: 0.2, 
+                onComplete: () => mobileDropdown.classList.add('hidden') 
+            });
+        }
+
+        function switchMobileTab(tabId) {
+            closeMobileMenuPanel();
+            // Sync up desktop header selection styling structure
+            const desktopButtonMatch = document.querySelector(`.tab-btn[onclick*="${tabId}"]`);
+            switchTab(tabId, desktopButtonMatch);
+        }
+
+        // 4. Project Initiation Inbound Processing
         function handleFormSubmission(event) {
             event.preventDefault();
             
@@ -485,7 +546,6 @@
             const type = document.getElementById('projectType').value;
             const details = document.getElementById('brief').value;
 
-            // Generate analytical terminal trace metadata
             const timestamp = new Date().toISOString();
             const diagnostics = `SYS_ID: SECURE_INBOUND_AUTH\nCLIENT_REF: ${name.toUpperCase().substring(0, 4)}_${Math.floor(Math.random() * 9000 + 1000)}\nROUTE_STATUS: PENDING_AHSAN_DIRECT_APPROVAL\nTIMESTAMP: ${timestamp}\nTARGET_EMAIL: ${email}`;
 
