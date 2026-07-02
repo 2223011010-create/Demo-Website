@@ -181,7 +181,6 @@
     <!-- MAIN APP CANVAS CONTAINER -->
     <main class="container max-w-7xl mx-auto px-6 pt-36 pb-20 relative z-10">
 
-        <!-- --- STREAMING_CHUNK:Structuring Hero Section... --- -->
         <!-- --- HERO PROFILE CARD (VISHNU DESIGN STYLE) --- -->
         <section class="mb-16">
             <div class="flex items-center gap-3 mb-6">
@@ -397,25 +396,25 @@
                     <h2 class="text-xs uppercase tracking-widest text-zinc-500 font-bold">04 / Secure Collaboration</h2>
                 </div>
 
-                <!-- FORM ADJUSTMENT: Upgraded dimensions & padding -->
-                <div class="max-w-2xl mx-auto glass-panel p-10 rounded-2xl relative" id="collaboration">
-                    <h3 class="text-3xl font-extrabold mb-8 text-center uppercase tracking-tight">Initiate Project Inbound</h3>
+                <!-- FORM ADJUSTMENT: Expanded to max-w-4xl with immersive layout proportions -->
+                <div class="max-w-4xl mx-auto glass-panel p-8 sm:p-14 rounded-3xl relative" id="collaboration">
+                    <h3 class="text-3xl sm:text-4xl font-extrabold mb-10 text-center uppercase tracking-tight">Initiate Project Inbound</h3>
                     
                     <!-- Direct Form Dispatch to soyedshafikulahsan@gmail.com with fallback dynamic triggers -->
-                    <form id="projectForm" onsubmit="handleFormSubmission(event)" class="space-y-6 text-left">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div class="flex flex-col gap-2">
-                                <label for="clientName" class="text-xs uppercase tracking-wider text-zinc-400 font-bold">Name</label>
-                                <input type="text" id="clientName" class="bg-zinc-950/80 dark:bg-zinc-100 border border-white/5 dark:border-zinc-200 rounded-xl px-5 py-3.5 text-sm text-white dark:text-zinc-900 focus:outline-none focus:border-accentRed transition-all" placeholder="Soyed Shafikul Ahsan" required>
+                    <form id="projectForm" onsubmit="handleFormSubmission(event)" class="space-y-8 text-left">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                            <div class="flex flex-col gap-2.5">
+                                <label for="clientName" class="text-sm uppercase tracking-wider text-zinc-400 font-bold">Name</label>
+                                <input type="text" id="clientName" class="bg-zinc-950/80 dark:bg-zinc-100 border border-white/5 dark:border-zinc-200 rounded-2xl px-6 py-4 text-base text-white dark:text-zinc-900 focus:outline-none focus:border-accentRed transition-all" placeholder="Soyed Shafikul Ahsan" required>
                             </div>
-                            <div class="flex flex-col gap-2">
-                                <label for="clientEmail" class="text-xs uppercase tracking-wider text-zinc-400 font-bold">Email</label>
-                                <input type="email" id="clientEmail" class="bg-zinc-950/80 dark:bg-zinc-100 border border-white/5 dark:border-zinc-200 rounded-xl px-5 py-3.5 text-sm text-white dark:text-zinc-900 focus:outline-none focus:border-accentRed transition-all" placeholder="yourname@domain.com" required>
+                            <div class="flex flex-col gap-2.5">
+                                <label for="clientEmail" class="text-sm uppercase tracking-wider text-zinc-400 font-bold">Email</label>
+                                <input type="email" id="clientEmail" class="bg-zinc-950/80 dark:bg-zinc-100 border border-white/5 dark:border-zinc-200 rounded-2xl px-6 py-4 text-base text-white dark:text-zinc-900 focus:outline-none focus:border-accentRed transition-all" placeholder="yourname@domain.com" required>
                             </div>
                         </div>
-                        <div class="flex flex-col gap-2">
-                            <label for="projectType" class="text-xs uppercase tracking-wider text-zinc-400 font-bold">Objective Type</label>
-                            <select id="projectType" class="bg-zinc-950/80 dark:bg-zinc-100 border border-white/5 dark:border-zinc-200 rounded-xl px-5 py-3.5 text-sm text-white dark:text-zinc-900 focus:outline-none focus:border-accentRed transition-all" required>
+                        <div class="flex flex-col gap-2.5">
+                            <label for="projectType" class="text-sm uppercase tracking-wider text-zinc-400 font-bold">Objective Type</label>
+                            <select id="projectType" class="bg-zinc-950/80 dark:bg-zinc-100 border border-white/5 dark:border-zinc-200 rounded-2xl px-6 py-4 text-base text-white dark:text-zinc-900 focus:outline-none focus:border-accentRed transition-all" required>
                                 <option value="" disabled selected>Select priority...</option>
                                 <option value="uiux">SaaS / Web UI/UX Design</option>
                                 <option value="motion">Video Post-Production & Motion</option>
@@ -423,32 +422,34 @@
                                 <option value="all">Full Suite Execution Package</option>
                             </select>
                         </div>
-                        <div class="flex flex-col gap-2">
-                            <label for="brief" class="text-xs uppercase tracking-wider text-zinc-400 font-bold">Project Details</label>
-                            <textarea id="brief" rows="4" class="bg-zinc-950/80 dark:bg-zinc-100 border border-white/5 dark:border-zinc-200 rounded-xl px-5 py-3.5 text-sm text-white dark:text-zinc-900 focus:outline-none focus:border-accentRed transition-all resize-none" placeholder="Describe the structural goals or scope details..." required></textarea>
+                        <div class="flex flex-col gap-2.5">
+                            <label for="brief" class="text-sm uppercase tracking-wider text-zinc-400 font-bold">Project Details</label>
+                            <textarea id="brief" rows="6" class="bg-zinc-950/80 dark:bg-zinc-100 border border-white/5 dark:border-zinc-200 rounded-2xl px-6 py-4 text-base text-white dark:text-zinc-900 focus:outline-none focus:border-accentRed transition-all resize-none" placeholder="Describe the structural goals or scope details..." required></textarea>
                         </div>
                         
-                        <button type="submit" class="w-full bg-white hover:bg-accentRed hover:text-white dark:bg-zinc-900 dark:hover:bg-accentRed text-zinc-950 dark:text-white py-4 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 transform active:scale-95">
-                            Secure Collaboration Space
-                        </button>
+                        <div class="pt-2">
+                            <button type="submit" class="w-full bg-white hover:bg-accentRed hover:text-white dark:bg-zinc-900 dark:hover:bg-accentRed text-zinc-950 dark:text-white py-4.5 sm:py-5 rounded-full text-sm font-extrabold uppercase tracking-widest transition-all duration-300 transform active:scale-[0.98]">
+                                Secure Collaboration Space
+                            </button>
+                        </div>
                     </form>
 
                     <!-- Successful Submission Screen Receipt Terminal -->
-                    <div class="hidden absolute inset-0 bg-black/95 dark:bg-white/95 rounded-2xl flex flex-col justify-center items-center text-center p-8 transition-all duration-500 z-20" id="formSuccess">
-                        <span class="text-4xl mb-4">✨</span>
-                        <h3 class="text-xl font-bold uppercase tracking-wide text-accentRed">Inbound Dispatched</h3>
-                        <p class="text-mutedText text-xs font-light mt-2 max-w-sm">
+                    <div class="hidden absolute inset-0 bg-black/95 dark:bg-white/95 rounded-3xl flex flex-col justify-center items-center text-center p-8 sm:p-14 transition-all duration-500 z-20" id="formSuccess">
+                        <span class="text-5xl mb-4">✨</span>
+                        <h3 class="text-2xl font-bold uppercase tracking-wide text-accentRed">Inbound Dispatched</h3>
+                        <p class="text-mutedText text-sm font-light mt-2 max-w-md">
                             Your secure collaboration parameters have been generated and structured. 
                         </p>
-                        <div class="text-left mt-6 bg-zinc-950 dark:bg-zinc-100 border border-white/5 dark:border-zinc-200 rounded-lg p-4 w-full">
-                            <pre class="text-[9px] font-mono text-zinc-500 dark:text-zinc-600 overflow-x-auto leading-relaxed" id="successMeta"></pre>
+                        <div class="text-left mt-8 bg-zinc-950 dark:bg-zinc-100 border border-white/5 dark:border-zinc-200 rounded-xl p-6 w-full">
+                            <pre class="text-xs font-mono text-zinc-500 dark:text-zinc-600 overflow-x-auto leading-relaxed" id="successMeta"></pre>
                         </div>
                         <!-- Auxiliary Action Hub -->
-                        <div class="mt-6 flex gap-3">
-                            <a id="nativeMailto" class="px-4 py-2 bg-accentRed text-white font-bold uppercase text-[9px] tracking-wider rounded-full hover:bg-red-700 transition-all">
+                        <div class="mt-8 flex gap-4">
+                            <a id="nativeMailto" class="px-6 py-3 bg-accentRed text-white font-bold uppercase text-xs tracking-wider rounded-full hover:bg-red-700 transition-all">
                                 Backup via Native Mail
                             </a>
-                            <button onclick="resetCollaborationForm()" class="px-4 py-2 bg-zinc-800 dark:bg-zinc-200 text-zinc-400 dark:text-zinc-600 font-bold uppercase text-[9px] tracking-wider rounded-full hover:text-white dark:hover:text-black transition-all">
+                            <button onclick="resetCollaborationForm()" class="px-6 py-3 bg-zinc-800 dark:bg-zinc-200 text-zinc-400 dark:text-zinc-600 font-bold uppercase text-xs tracking-wider rounded-full hover:text-white dark:hover:text-black transition-all">
                                 Reset
                             </button>
                         </div>
@@ -504,7 +505,6 @@
 
         // 2. High-Performance Tab Switch Engine
         function switchTab(tabId, buttonEl) {
-            // Update Navigation Menu Styles
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.classList.remove('active-tab', 'text-white', 'dark:text-zinc-800');
                 btn.classList.add('text-zinc-500');
@@ -517,7 +517,6 @@
             }
             buttonEl.classList.remove('text-zinc-500');
 
-            // Handle Tab Viewport Animations
             const targetView = document.getElementById(`tab-${tabId}`);
             const allViews = document.querySelectorAll('.tab-view');
 
@@ -546,19 +545,16 @@
             const type = document.getElementById('projectType').value;
             const details = document.getElementById('brief').value;
 
-            // Compilation of detailed plain-text metadata block
             const timestamp = new Date().toISOString();
             const referenceId = `${name.toUpperCase().substring(0, 4).replace(/\s/g, 'X')}_${Math.floor(Math.random() * 9000 + 1000)}`;
             
             const diagnostics = `SYS_ID: SECURE_INBOUND_AUTH\nCLIENT_REF: ${referenceId}\nROUTE_STATUS: ROUTED_TO_AHSAN\nTIMESTAMP: ${timestamp}\nTARGET_EMAIL: soyedshafikulahsan@gmail.com\nOBJ_TYPE: ${type.toUpperCase()}\n--------------------\nNAME: ${name}\nSENDER_EMAIL: ${email}\nBRIEF: ${details}`;
 
-            // 1. Build Native Fallback mailto Action dynamically for complete robustness
             const mailtoSubject = encodeURIComponent(`Secure Inbound Collaboration Request [REF: ${referenceId}]`);
             const mailtoBody = encodeURIComponent(`Dear Ahsan,\n\nI would like to initiate a secure collaboration project.\n\nProject details compiled below:\n\n---\n${diagnostics}\n---`);
             const nativeMailtoBtn = document.getElementById('nativeMailto');
             nativeMailtoBtn.href = `mailto:soyedshafikulahsan@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
 
-            // 2. Perform background dispatch execution
             fetch('https://formspree.io/f/YOUR_UNIQUE_ID', {
                 method: 'POST',
                 headers: {
@@ -578,7 +574,6 @@
                 console.log("Routing completed to diagnostic terminal state.");
             });
 
-            // Show secure receipt screen
             const successTerminal = document.getElementById('formSuccess');
             document.getElementById('successMeta').textContent = diagnostics;
             successTerminal.classList.remove('hidden');
