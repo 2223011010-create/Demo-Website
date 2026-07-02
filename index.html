@@ -363,48 +363,65 @@
                     <h2 class="text-xs uppercase tracking-widest text-zinc-500 font-bold">04 / Secure Collaboration</h2>
                 </div>
 
-                <div class="max-w-3xl mx-auto glass-panel p-6 sm:p-10 rounded-2xl relative" id="collaboration">
-                    <h3 class="text-2xl sm:text-3xl font-extrabold mb-8 text-center uppercase tracking-tight">Initiate Project Inbound</h3>
+                <!-- FULL HEADER SIZE SYMMETRY CONTAINER (max-w-7xl aligned with container and navigation panel structure) -->
+                <div class="max-w-7xl mx-auto glass-panel p-6 sm:p-10 md:p-12 rounded-3xl relative" id="collaboration">
                     
-                    <form id="projectForm" onsubmit="handleFormSubmission(event)" class="space-y-6 text-left">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div class="flex flex-col gap-2">
-                                <label for="clientName" class="text-xs uppercase tracking-wider text-zinc-400 font-bold">Name</label>
-                                <input type="text" id="clientName" class="bg-zinc-950/80 border border-white/5 rounded-xl px-5 py-3.5 text-sm text-white focus:outline-none focus:border-accentRed transition-all" placeholder="Soyed Shafikul Ahsan" required>
-                            </div>
-                            <div class="flex flex-col gap-2">
-                                <label for="clientEmail" class="text-xs uppercase tracking-wider text-zinc-400 font-bold">Email</label>
-                                <input type="email" id="clientEmail" class="bg-zinc-950/80 border border-white/5 rounded-xl px-5 py-3.5 text-sm text-white focus:outline-none focus:border-accentRed transition-all" placeholder="yourname@domain.com" required>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <label for="projectType" class="text-xs uppercase tracking-wider text-zinc-400 font-bold">Objective Type</label>
-                            <select id="projectType" class="bg-zinc-950/80 border border-white/5 rounded-xl px-5 py-3.5 text-sm text-white focus:outline-none focus:border-accentRed transition-all" required>
-                                <option value="" disabled selected>Select priority...</option>
-                                <option value="uiux">SaaS / Web UI/UX Design</option>
-                                <option value="motion">Video Post-Production & Motion</option>
-                                <option value="strategy">Conversion Strategy & Positioning</option>
-                                <option value="all">Full Suite Execution Package</option>
-                            </select>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <label for="brief" class="text-xs uppercase tracking-wider text-zinc-400 font-bold">Project Details</label>
-                            <textarea id="brief" rows="5" class="bg-zinc-950/80 border border-white/5 rounded-xl px-5 py-3.5 text-sm text-white focus:outline-none focus:border-accentRed transition-all resize-none" placeholder="Describe the structural goals or scope details..." required></textarea>
+                    <!-- Internal Layout Engine splits textual scope and input elements neatly on desktop layouts -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                        
+                        <!-- Left Layout Column: Headers & Info Paradigm -->
+                        <div class="lg:col-span-4 space-y-4">
+                            <h3 class="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-white leading-tight">
+                                Initiate <br class="hidden lg:block">Project Inbound
+                            </h3>
+                            <p class="text-sm font-light text-zinc-400 leading-relaxed">
+                                Deploy project variables into our secure pipeline architecture. All inbound creative operations are processed with conversion security frameworks.
+                            </p>
                         </div>
                         
-                        <button type="submit" class="w-full bg-white hover:bg-accentRed hover:text-white text-zinc-950 py-4 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 transform active:scale-95">
-                            Secure Collaboration Space
+                        <!-- Right Layout Column: Input Fields Interface Grid Matrix -->
+                        <div class="lg:col-span-8 w-full">
+                            <form id="projectForm" onsubmit="handleFormSubmission(event)" class="space-y-6 text-left">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div class="flex flex-col gap-2">
+                                        <label for="clientName" class="text-xs uppercase tracking-wider text-zinc-400 font-bold">Name</label>
+                                        <input type="text" id="clientName" class="bg-zinc-950/80 border border-white/5 rounded-xl px-5 py-3.5 text-sm text-white focus:outline-none focus:border-accentRed transition-all" placeholder="Soyed Shafikul Ahsan" required>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label for="clientEmail" class="text-xs uppercase tracking-wider text-zinc-400 font-bold">Email</label>
+                                        <input type="email" id="clientEmail" class="bg-zinc-950/80 border border-white/5 rounded-xl px-5 py-3.5 text-sm text-white focus:outline-none focus:border-accentRed transition-all" placeholder="yourname@domain.com" required>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label for="projectType" class="text-xs uppercase tracking-wider text-zinc-400 font-bold">Objective Type</label>
+                                    <select id="projectType" class="bg-zinc-950/80 border border-white/5 rounded-xl px-5 py-3.5 text-sm text-white focus:outline-none focus:border-accentRed transition-all w-full" required>
+                                        <option value="" disabled selected>Select priority...</option>
+                                        <option value="uiux">SaaS / Web UI/UX Design</option>
+                                        <option value="motion">Video Post-Production & Motion</option>
+                                        <option value="strategy">Conversion Strategy & Positioning</option>
+                                        <option value="all">Full Suite Execution Package</option>
+                                    </select>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label for="brief" class="text-xs uppercase tracking-wider text-zinc-400 font-bold">Project Details</label>
+                                    <textarea id="brief" rows="5" class="bg-zinc-950/80 border border-white/5 rounded-xl px-5 py-3.5 text-sm text-white focus:outline-none focus:border-accentRed transition-all resize-none w-full" placeholder="Describe the structural goals or scope details..." required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-white hover:bg-accentRed hover:text-white text-zinc-950 py-4 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 transform active:scale-95">
+                                    Secure Collaboration Space
                         </button>
                     </form>
+                </div>
+            </div>
 
-                    <!-- Successful Submission Screen Receipt Terminal -->
-                    <div class="hidden absolute inset-0 bg-black/90 rounded-2xl flex flex-col justify-center items-center text-center p-6 sm:p-8 transition-all duration-500 z-20" id="formSuccess">
+                    <!-- Successful Submission Screen Receipt Terminal overlay (Inherits identical panel boundaries) -->
+                    <div class="hidden absolute inset-0 bg-black/95 rounded-3xl flex flex-col justify-center items-center text-center p-6 sm:p-8 transition-all duration-500 z-20" id="formSuccess">
                         <span class="text-4xl mb-4">✨</span>
                         <h3 class="text-xl font-bold uppercase tracking-wide text-accentRed">Inbound Secure</h3>
                         <p class="text-zinc-400 text-xs font-light mt-2 max-w-sm">
                             Thank you. Your request parameter details have been compiled and secure. Ahsan will initiate coordination shortly.
                         </p>
-                        <div class="text-left mt-6 bg-zinc-950 border border-white/5 rounded-lg p-4 w-full">
+                        <div class="text-left mt-6 bg-zinc-950 border border-white/5 rounded-lg p-4 w-full max-w-xl">
                             <pre class="text-[9px] font-mono text-zinc-500 overflow-x-auto leading-relaxed" id="successMeta"></pre>
                         </div>
                     </div>
